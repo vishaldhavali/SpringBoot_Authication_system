@@ -1,0 +1,34 @@
+# Root-level .gitignore for entire project
+
+# Backend
+Backend-java/target/
+Backend-java/build/
+Backend-java/.idea/
+Backend-java/*.iml
+Backend-java/src/main/resources/application.properties
+Backend-java/src/main/resources/application-*.properties
+
+# Frontend
+Frontend-React/node_modules/
+Frontend-React/dist/
+Frontend-React/dist-ssr/
+Frontend-React/.env
+Frontend-React/.env.local
+Frontend-React/.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*

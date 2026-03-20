@@ -1,0 +1,85 @@
+.otpContainer {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: var(--spacing-2xl) auto;
+  transition: all var(--transition-base);
+  width: fit-content;
+  padding: 0 var(--spacing-md);
+}
+
+.otpContainer.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+.otpInput {
+  width: 36px;
+  height: 48px;
+  min-width: 36px;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--color-text-dark);
+  font-family: 'Courier New', monospace;
+  transition: all var(--transition-base);
+  cursor: text;
+  background-color: white;
+  padding: 0;
+}
+
+.otpInput:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(61, 61, 180, 0.1);
+  animation: bounce 0.3s ease-out;
+}
+
+.otpInput:disabled {
+  background-color: var(--color-bg-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.otpInput.filled {
+  animation: bounce 0.3s ease-out;
+  border-color: var(--color-border-focus);
+}
+
+.otpInput.inputError {
+  border-color: var(--color-error);
+  background-color: var(--color-error-light);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .otpContainer {
+    gap: 5px;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .otpInput {
+    width: 34px;
+    height: 46px;
+    min-width: 34px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .otpContainer {
+    gap: 4px;
+    padding: 0;
+  }
+
+  .otpInput {
+    width: 32px;
+    height: 44px;
+    min-width: 32px;
+    font-size: 14px;
+  }
+}

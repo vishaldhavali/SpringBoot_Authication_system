@@ -1,0 +1,97 @@
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 40px;
+  border: none;
+  border-bottom: 2px solid var(--color-border);
+  background-color: transparent;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--color-text-dark);
+  transition: border-color var(--transition-base);
+  line-height: 1.5;
+  -webkit-autofill: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--color-bg-light);
+}
+
+.input:focus {
+  outline: none;
+  border-bottom-color: var(--color-border-focus);
+}
+
+.input.focused {
+  border-bottom-color: var(--color-border-focus);
+}
+
+.input.error {
+  border-bottom-color: var(--color-error);
+  animation: shake 0.4s ease-in-out;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-placeholder);
+  pointer-events: none;
+  transition: color var(--transition-base);
+  z-index: 1;
+}
+
+.input:focus ~ .icon,
+.input.focused ~ .icon {
+  color: var(--color-primary);
+}
+
+.togglePassword {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-text-placeholder);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  transition: color var(--transition-fast);
+  z-index: 1;
+}
+
+.togglePassword:hover {
+  color: var(--color-text-dark);
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Remove autofill styling */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: var(--color-text-dark) !important;
+}

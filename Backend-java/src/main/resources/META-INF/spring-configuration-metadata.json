@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.vd.reactapp.config.JwtProperties",
+      "description": "JWT configuration properties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret key for JWT signing and verification",
+      "sourceType": "com.vd.reactapp.config.JwtProperties"
+    }
+  ],
+  "hints": []
+}

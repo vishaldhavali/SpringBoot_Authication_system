@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-light) 0%,
+    #e8f7f5 100%
+  );
+  padding: var(--spacing-lg);
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3xl);
+  max-width: 390px;
+  width: 100%;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
+  background: none;
+  border: none;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton:hover {
+  transform: translateX(-4px);
+  color: var(--color-primary);
+}
+
+.heading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--spacing-md) 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-light);
+  margin: 0 0 var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.resendSection {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.resendText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.resendButton {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.resendButton:hover:not(:disabled) {
+  text-decoration: underline;
+  color: var(--color-primary-dark);
+}
+
+.resendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.timer {
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+}
+
+.infoText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-lg);
+  }
+
+  .card {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .heading {
+    font-size: var(--font-size-xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-base);
+  }
+}
